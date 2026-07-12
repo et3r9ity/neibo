@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join the Neibo alpha</title>
+<meta name="description" content="Neibo — live map of Latvia. Join the closed alpha test.">
+<meta property="og:title" content="Join the Neibo alpha">
+<meta property="og:description" content="Live map of Latvia: accidents, fires, outages and city events — in one app.">
+<meta property="og:image" content="https://kirillgl220.github.io/neibo/icon.png">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F6F0E6; --surface: #FFFFFF; --line: #EEE5D6;
+    --primary: #DD6A42; --primary-dark: #C25735;
+    --text: #3E362E; --text-mid: #8F8577;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, system-ui, sans-serif;
+    background: var(--bg); color: var(--text);
+    display: flex; justify-content: center; padding: 32px 20px 56px;
+  }
+  .wrap { width: 100%; max-width: 440px; }
+  .logo { width: 88px; height: 88px; border-radius: 22px; display: block; margin: 0 auto 18px; box-shadow: 0 6px 24px rgba(138,110,75,.25); }
+  h1 { font-size: 26px; font-weight: 800; text-align: center; }
+  .sub { text-align: center; color: var(--text-mid); font-size: 15px; margin: 8px 0 28px; line-height: 1.45; }
+  .step {
+    background: var(--surface); border-radius: 16px; padding: 14px 16px;
+    display: flex; gap: 12px; align-items: flex-start; margin-bottom: 10px;
+    box-shadow: 0 3px 10px rgba(138,110,75,.08);
+  }
+  .num {
+    flex: none; width: 26px; height: 26px; border-radius: 50%;
+    background: #FBE8DF; color: var(--primary); font-weight: 800; font-size: 14px;
+    display: flex; align-items: center; justify-content: center; margin-top: 1px;
+  }
+  .step p { font-size: 14.5px; line-height: 1.45; }
+  .step a { color: var(--primary); font-weight: 700; text-decoration: none; }
+  .stores { display: flex; gap: 8px; margin-top: 8px; }
+  .store {
+    flex: 1; text-align: center; font-size: 13px; font-weight: 700;
+    border: 1.5px solid var(--line); border-radius: 10px; padding: 8px 4px;
+    color: var(--text); text-decoration: none;
+  }
+  .cta {
+    display: block; text-align: center; background: var(--primary); color: #fff;
+    font-size: 16px; font-weight: 800; text-decoration: none;
+    border-radius: 14px; padding: 17px 16px; margin: 22px 0 10px;
+    box-shadow: 0 6px 18px rgba(221,106,66,.35);
+  }
+  .cta:active { background: var(--primary-dark); }
+  .hint { text-align: center; color: var(--text-mid); font-size: 12.5px; line-height: 1.5; }
+  .hint a { color: var(--primary); font-weight: 700; text-decoration: none; }
+  .divider { border: none; border-top: 1px solid var(--line); margin: 26px 0 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img class="logo" src="icon.png" alt="Neibo logo">
+  <h1>Join the Neibo alpha</h1>
+  <p class="sub">Live map of Latvia: accidents, fires, outages and city events — everything happening nearby, in one app.</p>
+
+  <div class="step"><div class="num">1</div>
+    <div>
+      <p><b>Install Expo Go</b> — the alpha runs inside it.</p>
+      <div class="stores">
+        <a class="store" href="https://apps.apple.com/app/expo-go/id982107779">App Store</a>
+        <a class="store" href="https://play.google.com/store/apps/details?id=host.exp.exponent">Google Play</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="step"><div class="num">2</div>
+    <p><b>Create a free account</b> at <a href="https://expo.dev/signup">expo.dev</a></p>
+  </div>
+
+  <div class="step"><div class="num">3</div>
+    <p><b>Send your expo.dev email</b> to our Telegram channel <a href="https://t.me/neibo_app">@neibo_app</a> (tap Message) — we'll invite you</p>
+  </div>
+
+  <div class="step"><div class="num">4</div>
+    <p><b>Accept the invite</b> — check your inbox for an email from Expo ("join rigamap")</p>
+  </div>
+
+  <div class="step"><div class="num">5</div>
+    <p><b>Log in to Expo Go</b> with your account, then tap the button below</p>
+  </div>
+
+  <a class="cta" href="exp://u.expo.dev/bff3cc4e-3219-47c0-972f-e19bb8d88619?channel-name=preview&amp;runtime-version=exposdk:54.0.0">Open Neibo in Expo Go</a>
+  <p class="hint">The button works after steps 1–5. Updates arrive automatically — just reopen the app.</p>
+
+  <hr class="divider">
+  <p class="hint">Seeing "Something went wrong"? You haven't accepted the invite yet, or Expo Go is logged into a different account. News &amp; patch notes: <a href="https://t.me/neibo_app">t.me/neibo_app</a></p>
+</div>
+</body>
+</html>
