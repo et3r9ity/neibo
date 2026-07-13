@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neibo — Alpha 2.0.0 changelog</title>
+<meta name="description" content="Everything new in Neibo Alpha 2.0.0 — full changelog.">
+<meta property="og:title" content="Neibo Alpha 2.0.0 — full changelog">
+<meta property="og:description" content="Reporting redesigned, Waze-style live events, accounts and nicknames, smarter map — everything that changed since the first alpha.">
+<meta property="og:image" content="https://et3r9ity.github.io/neibo/icon.png">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F6F0E6; --surface: #FFFFFF; --line: #EEE5D6;
+    --primary: #DD6A42; --primary-dark: #C25735; --primary-soft: #FBE8DF;
+    --green: #38A169; --green-soft: #E6F6EC;
+    --text: #3E362E; --text-mid: #8F8577;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, system-ui, sans-serif;
+    background: var(--bg); color: var(--text);
+    display: flex; justify-content: center; padding: 32px 20px 56px;
+  }
+  .wrap { width: 100%; max-width: 560px; }
+  .logo { width: 72px; height: 72px; border-radius: 18px; display: block; margin: 0 auto 16px; box-shadow: 0 6px 24px rgba(138,110,75,.25); }
+  h1 { font-size: 26px; font-weight: 800; text-align: center; }
+  .sub { text-align: center; color: var(--text-mid); font-size: 15px; margin: 8px 0 6px; line-height: 1.45; }
+  .date { text-align: center; color: var(--text-mid); font-size: 12.5px; margin-bottom: 26px; }
+  .badge {
+    display: inline-block; background: var(--primary-soft); color: var(--primary);
+    font-size: 12px; font-weight: 800; border-radius: 999px; padding: 3px 10px;
+    vertical-align: middle; margin-left: 6px;
+  }
+  h2 {
+    font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--text); margin: 26px 4px 10px; display: flex; align-items: center; gap: 8px;
+  }
+  h2 .emoji { font-size: 16px; }
+  .card {
+    background: var(--surface); border-radius: 16px; padding: 4px 16px;
+    box-shadow: 0 3px 10px rgba(138,110,75,.08);
+  }
+  .item { padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .item:last-child { border-bottom: none; }
+  .item b { font-weight: 700; }
+  .item p { font-size: 14px; line-height: 1.5; color: var(--text); }
+  .item .more { color: var(--text-mid); font-size: 13px; line-height: 1.5; margin-top: 3px; }
+  .tag {
+    display: inline-block; font-size: 10.5px; font-weight: 800; border-radius: 999px;
+    padding: 2px 8px; margin-right: 6px; vertical-align: 1px;
+  }
+  .tag.new { background: var(--green-soft); color: var(--green); }
+  .tag.fix { background: var(--primary-soft); color: var(--primary); }
+  .foot {
+    text-align: center; color: var(--text-mid); font-size: 12.5px; line-height: 1.6;
+    margin-top: 28px;
+  }
+  .foot a { color: var(--primary); font-weight: 700; text-decoration: none; }
+  .cta {
+    display: block; text-align: center; background: var(--primary); color: #fff;
+    font-size: 15px; font-weight: 800; text-decoration: none;
+    border-radius: 14px; padding: 15px 16px; margin: 26px 0 8px;
+    box-shadow: 0 6px 18px rgba(221,106,66,.35);
+  }
+  .cta:active { background: var(--primary-dark); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img class="logo" src="icon.png" alt="Neibo">
+  <h1>Alpha 2.0.0 <span class="badge">changelog</span></h1>
+  <p class="sub">Everything that changed since the first alpha build.<br>Built almost entirely on your bug reports — thank you!</p>
+  <p class="date">July 2026 · Neibo alpha test</p>
+
+  <h2><span class="emoji">➕</span> Reporting — completely rebuilt</h2>
+  <div class="card">
+    <div class="item"><p><span class="tag new">NEW</span><b>Liquid open animation.</b> Tap the plus — the report screen unfolds out of the button like a drop, and the plus turns into a cross. Tap any tab to slide it back.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Step-by-step wizard.</b> Pick a category, then a subcategory — 33 of them, each with its own icon, laid out as big easy-to-tap tiles. Every completed step collapses into a chip you can tap to change.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Taxi-style location picker.</b> The pin stays centered — you move the map under it with one finger. Big square map, address detected automatically.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>500 m honesty rule.</b> You can only report within 500 metres of where you actually are, and location is required. This keeps every marker on the map trustworthy.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Photos, done right.</b> One "Add photo" button (camera or gallery), no forced cropping — photos upload exactly as shot. Tap any photo in the app to view it fullscreen.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Instant finish.</b> After sending you get a quick "Report added" toast and land back on the map — your report is already there, live for everyone.</p></div>
+  </div>
+
+  <h2><span class="emoji">⏳</span> Live events, Waze-style</h2>
+  <div class="card">
+    <div class="item"><p><span class="tag new">NEW</span><b>Events now have a lifetime.</b> A traffic accident lives a few hours, a water outage — until the evening, a city festival — until it ends. Each category and subcategory has its own sensible duration.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>"Is this still happening?"</b> Walk past an event and Neibo may ask if it's still there. "Yes" extends its life, a couple of "no" votes clear it from the map. The community keeps the map fresh.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Announcements.</b> Future events (concerts, fairs, road closures) show a "Soon" badge and stay on the map until they actually end — no early removal.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Feed archive.</b> Ended events don't vanish — the feed has All / Live / Ended tabs, with a green "Live" badge next to ongoing ones.</p></div>
+  </div>
+
+  <h2><span class="emoji">👤</span> Accounts &amp; community</h2>
+  <div class="card">
+    <div class="item"><p><span class="tag new">NEW</span><b>Sign in your way.</b> New welcome screen: continue as a guest in one tap, or create an account with email. Clean redesigned login with helpful error messages.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Nicknames.</b> Every user gets one (change it in Settings). Your reports are now signed with your name.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Team badges.</b> Posts by the Neibo team carry Admin / Moderator badges, and moderators can verify or clear reports — you'll see a "verified" checkmark on confirmed events.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Your reports, your rules.</b> Posted something by mistake? You can delete your own reports.</p></div>
+  </div>
+
+  <h2><span class="emoji">🗺️</span> Map</h2>
+  <div class="card">
+    <div class="item"><p><span class="tag new">NEW</span><b>Google-Maps-style sheet.</b> The nearby list drags smoothly, snaps to positions and collapses to a small tab. Filters open as the same native sheets.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Your radius, visible.</b> A circle around you shows your notification area — edit the radius right from the sheet and the map zooms to fit.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Realtime markers.</b> New reports appear on everyone's map instantly — no restart needed.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Search &amp; filters.</b> Fullscreen search with nearest-events suggestions, plus quick category chips under the search bar.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Smart clusters.</b> Markers group into clusters; several events at the same spot open as a picker list.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Opens where you are.</b> The map starts at your location, and the map popup now shows photos, confirmations and a route button.</p></div>
+  </div>
+
+  <h2><span class="emoji">📰</span> Feed</h2>
+  <div class="card">
+    <div class="item"><p><span class="tag new">NEW</span><b>Warm redesign.</b> Cleaner cards, status pills next to titles, category colors, tidy filters.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Whole country → city → district.</b> Filter the feed for all of Latvia or drill down to your neighbourhood.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Show on map.</b> Jump from any post straight to its marker. News from external sources link to the original article.</p></div>
+  </div>
+
+  <h2><span class="emoji">🔧</span> Fixed along the way</h2>
+  <div class="card">
+    <div class="item"><p><span class="tag fix">FIX</span>Android testers couldn't join — sign-in flow and the join page were reworked.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>Report location no longer defaults to the city centre — it's your real position, with a re-locate button.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>Markers disappeared near screen edges while panning.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>"Show on map" from the feed crashed the app in some cases — and no longer teleports you to the city centre for news without an exact location.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>Moderator actions now update everywhere instantly — no closing and reopening.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>Keyboard no longer covers inputs on the login and settings screens.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>Filter sheets sometimes didn't open; the back button in event details is now a proper in-app header.</p></div>
+  </div>
+
+  <h2><span class="emoji">⚠️</span> Known issues</h2>
+  <div class="card">
+    <div class="item"><p>Push notifications are off in the alpha build — the notification settings are a preview. Coming with a future release.</p></div>
+    <div class="item"><p>Auto-parsed news don't have exact map locations yet — we're working on it.</p></div>
+  </div>
+
+  <a class="cta" href="https://t.me/neibo_app">Discuss in the Telegram channel</a>
+  <p class="foot">The update arrives automatically next time you open the app.<br>If it doesn't — fully close Expo Go and open it again.<br><br>Not in the alpha yet? <a href="https://et3r9ity.github.io/neibo/">Join here</a></p>
+</div>
+</body>
+</html>
