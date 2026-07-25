@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neibo — Alpha 2.0.0 changelog</title>
-<meta name="description" content="Everything new in Neibo Alpha 2.0.0 — full changelog.">
-<meta property="og:title" content="Neibo Alpha 2.0.0 — full changelog">
-<meta property="og:description" content="Reporting redesigned, Waze-style live events, accounts and nicknames, smarter map — everything that changed since the first alpha.">
+<title>Neibo — Alpha 2.5.0 changelog</title>
+<meta name="description" content="Everything new in Neibo Alpha 2.5.0 — full changelog.">
+<meta property="og:title" content="Neibo Alpha 2.5.0 — full changelog">
+<meta property="og:description" content="User profiles, a brand-new report flow, reaction icons, live pulsing markers and a floating dock — the biggest design update yet.">
 <meta property="og:image" content="https://et3r9ity.github.io/neibo/icon.png">
 <link rel="icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,67 +72,69 @@
 <body>
 <div class="wrap">
   <img class="logo" src="icon.png" alt="Neibo">
-  <h1>Alpha 2.0.0 <span class="badge">changelog</span></h1>
-  <p class="sub">Everything that changed since the first alpha build.<br>Built almost entirely on your bug reports — thank you!</p>
+  <h1>Alpha 2.5.0 <span class="badge">changelog</span></h1>
+  <p class="sub">The biggest design update yet: profiles, a rebuilt report flow<br>and a whole new feel across the app.</p>
   <p class="date">July 2026 · Neibo alpha test</p>
 
-  <h2><span class="emoji">➕</span> Reporting — completely rebuilt</h2>
+  <h2><span class="emoji">👤</span> Profiles are here</h2>
   <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>Liquid open animation.</b> Tap the plus — the report screen unfolds out of the button like a drop, and the plus turns into a cross. Tap any tab to slide it back.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Step-by-step wizard.</b> Pick a category, then a subcategory — 33 of them, each with its own icon, laid out as big easy-to-tap tiles. Every completed step collapses into a chip you can tap to change.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Taxi-style location picker.</b> The pin stays centered — you move the map under it with one finger. Big square map, address detected automatically.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>500 m honesty rule.</b> You can only report within 500 metres of where you actually are, and location is required. This keeps every marker on the map trustworthy.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Photos, done right.</b> One "Add photo" button (camera or gallery), no forced cropping — photos upload exactly as shot. Tap any photo in the app to view it fullscreen.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Instant finish.</b> After sending you get a quick "Report added" toast and land back on the map — your report is already there, live for everyone.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Your own profile.</b> Avatar, nickname, member-since date, your report history and live stats — reports, reactions received and views. Open it from Settings, or tap any author on a map card or post to see theirs.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Activity rank.</b> Reports and reactions you receive earn points that level you up: Newcomer → Neighbour → Local → Voice of the District → Neighbourhood Legend. Progress bar included.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Profile photos.</b> Upload an avatar straight from your gallery — it shows up in your profile.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Pick your name.</b> Right after signing in (guests too), Neibo now asks what to call you — with live checks and suggestions. Nickname editing moved into your profile.</p></div>
   </div>
 
-  <h2><span class="emoji">⏳</span> Live events, Waze-style</h2>
+  <h2><span class="emoji">➕</span> Reporting — rebuilt again, properly</h2>
   <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>Events now have a lifetime.</b> A traffic accident lives a few hours, a water outage — until the evening, a city festival — until it ends. Each category and subcategory has its own sensible duration.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>"Is this still happening?"</b> Walk past an event and Neibo may ask if it's still there. "Yes" extends its life, a couple of "no" votes clear it from the map. The community keeps the map fresh.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Announcements.</b> Future events (concerts, fairs, road closures) show a "Soon" badge and stay on the map until they actually end — no early removal.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Feed archive.</b> Ended events don't vanish — the feed has All / Live / Ended tabs, with a green "Live" badge next to ongoing ones.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Glass island.</b> The report sheet is now a compact frosted-glass panel that floats up from the plus button and sizes itself to each step — no more full-screen takeover. Tap outside it to close.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>8 categories.</b> Besides accidents, fires, utilities and city life there are two fresh ones: <b>Vibe</b> (sunsets, cool cars, street art) and <b>Spots</b> (finds, cute animals, new places). Because the alpha showed you post good moments, not just emergencies.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Morphing categories.</b> Pick a category and it glides to the centre while subcategories appear around it as neat tiles. Tap it again to bring the full grid back.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Cleaner location step.</b> Just the map: your position, a centered pin and a visible 500 m circle showing exactly how far you can place the marker. Too far? The button simply greys out.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Swipe to go back.</b> iOS-style edge swipe steps you back through the wizard; a segmented progress bar and a back button live in the header.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Photo &amp; details, minimal.</b> A big photo square and a borderless notes field — nothing extra.</p></div>
   </div>
 
-  <h2><span class="emoji">👤</span> Accounts &amp; community</h2>
+  <h2><span class="emoji">❤️</span> Reactions, reimagined</h2>
   <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>Sign in your way.</b> New welcome screen: continue as a guest in one tap, or create an account with email. Clean redesigned login with helpful error messages.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Nicknames.</b> Every user gets one (change it in Settings). Your reports are now signed with your name.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Team badges.</b> Posts by the Neibo team carry Admin / Moderator badges, and moderators can verify or clear reports — you'll see a "verified" checkmark on confirmed events.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Your reports, your rules.</b> Posted something by mistake? You can delete your own reports.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Heart first.</b> Every event card has a quick heart — tap to like. An arrow next to it unfolds the full row: like, dislike, laugh, cry and a clown we drew ourselves.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Icons, not emojis.</b> Reactions are now clean minimal icons that match the app, with per-reaction counters. Your pick stays highlighted in its own colour.</p></div>
   </div>
 
-  <h2><span class="emoji">🗺️</span> Map</h2>
+  <h2><span class="emoji">🗺️</span> Map, alive</h2>
   <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>Google-Maps-style sheet.</b> The nearby list drags smoothly, snaps to positions and collapses to a small tab. Filters open as the same native sheets.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Your radius, visible.</b> A circle around you shows your notification area — edit the radius right from the sheet and the map zooms to fit.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Realtime markers.</b> New reports appear on everyone's map instantly — no restart needed.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Search &amp; filters.</b> Fullscreen search with nearest-events suggestions, plus quick category chips under the search bar.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Smart clusters.</b> Markers group into clusters; several events at the same spot open as a picker list.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Opens where you are.</b> The map starts at your location, and the map popup now shows photos, confirmations and a route button.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Live pulse.</b> Ongoing events breathe with a red halo right on the map — you can spot what's happening now at a glance.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Cleaner markers.</b> No more pointy tails — just crisp circles that pop in smoothly. Clusters form less eagerly and grow in gently.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Smoother cards.</b> Tapping a marker opens the event card with a quick soft bounce. Swipe down to dismiss. Confirm buttons and crosses are gone — the app asks eyewitnesses itself, Waze-style.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Radius, back where it belongs.</b> The radius control returned to the "Nearby" sheet — tap the radar icon to adjust with a slider and presets.</p></div>
   </div>
 
-  <h2><span class="emoji">📰</span> Feed</h2>
+  <h2><span class="emoji">🧭</span> New look &amp; feel</h2>
   <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>Warm redesign.</b> Cleaner cards, status pills next to titles, category colors, tidy filters.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Whole country → city → district.</b> Filter the feed for all of Latvia or drill down to your neighbourhood.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Show on map.</b> Jump from any post straight to its marker. News from external sources link to the original article.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Floating dock.</b> Navigation is now a frosted-glass pill hovering above the content, icon-only, with a soft sliding highlight and icons that fill in when active.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Warmer design language.</b> New palette, softer shadows, gentle spring physics and subtler haptics across the whole app — vibration only where it means something.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Welcome screen redesign.</b> Cleaner start: one-tap guest entry or email sign-in on a tidy bottom panel.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Settings, decluttered.</b> A profile card on top, notifications moved to their own page, and your nickname now lives in the profile.</p></div>
+  </div>
+
+  <h2><span class="emoji">🛡️</span> Keeping the map trustworthy</h2>
+  <div class="card">
+    <div class="item"><p><span class="tag new">NEW</span><b>AI moderation.</b> Reports with offensive text or inappropriate photos are checked automatically before they reach the map.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>View counters.</b> Events count unique views — see how many neighbours noticed a report.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Stronger moderation tools.</b> The team can now ban accounts that abuse the map — banned users can't post or react.</p></div>
   </div>
 
   <h2><span class="emoji">🔧</span> Fixed along the way</h2>
   <div class="card">
-    <div class="item"><p><span class="tag fix">FIX</span>Android testers couldn't join — sign-in flow and the join page were reworked.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>Report location no longer defaults to the city centre — it's your real position, with a re-locate button.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>Markers disappeared near screen edges while panning.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>"Show on map" from the feed crashed the app in some cases — and no longer teleports you to the city centre for news without an exact location.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>Moderator actions now update everywhere instantly — no closing and reopening.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>Keyboard no longer covers inputs on the login and settings screens.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>Filter sheets sometimes didn't open; the back button in event details is now a proper in-app header.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>Markers sometimes ignored the first tap on iOS — not anymore.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>The report sheet could open stuck to the top of the screen after using the keyboard.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>The radius button occasionally went dead until app restart.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>Fullscreen photos no longer wobble — and they grow out of the exact frame you tapped.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>Dozens of small animation, layering and layout fixes across map, feed and report.</p></div>
   </div>
 
   <h2><span class="emoji">⚠️</span> Known issues</h2>
   <div class="card">
-    <div class="item"><p>Push notifications are off in the alpha build — the notification settings are a preview. Coming with a future release.</p></div>
+    <div class="item"><p>Push notifications are still off in the alpha build — the notifications page is a preview. Coming with a future release.</p></div>
     <div class="item"><p>Auto-parsed news don't have exact map locations yet — we're working on it.</p></div>
   </div>
 
