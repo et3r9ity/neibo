@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neibo — Alpha 2.5.0 changelog</title>
-<meta name="description" content="Everything new in Neibo Alpha 2.5.0 — full changelog.">
-<meta property="og:title" content="Neibo Alpha 2.5.0 — full changelog">
-<meta property="og:description" content="User profiles, a brand-new report flow, reaction icons, live pulsing markers and a floating dock — the biggest design update yet.">
+<title>Neibo — Alpha 3.0.0 changelog</title>
+<meta name="description" content="Everything new in Neibo Alpha 3.0.0 — full changelog.">
+<meta property="og:title" content="Neibo Alpha 3.0.0 — full changelog">
+<meta property="og:description" content="Every screen redrawn in glass, a new Where to go tab with 1492 places in Riga, Reels-style event cards — and a jump to the newest Expo runtime.">
 <meta property="og:image" content="https://et3r9ity.github.io/neibo/icon.png">
 <link rel="icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,6 +55,24 @@
   }
   .tag.new { background: var(--green-soft); color: var(--green); }
   .tag.fix { background: var(--primary-soft); color: var(--primary); }
+  /* Обязательное действие: без обновления Expo Go этот релиз не откроется */
+  .notice {
+    background: var(--primary-soft); border: 1.5px solid var(--primary);
+    border-radius: 16px; padding: 16px 18px; margin-bottom: 4px;
+  }
+  .notice h3 {
+    font-size: 15px; font-weight: 800; color: var(--primary-dark);
+    margin-bottom: 7px; display: flex; align-items: center; gap: 7px;
+  }
+  .notice p { font-size: 14px; line-height: 1.5; }
+  .notice p + p { margin-top: 8px; }
+  .notice b { font-weight: 800; }
+  .stores { display: flex; gap: 8px; margin-top: 12px; }
+  .store {
+    flex: 1; text-align: center; background: var(--surface); color: var(--primary);
+    font-size: 13.5px; font-weight: 800; text-decoration: none;
+    border-radius: 11px; padding: 11px 8px;
+  }
   .foot {
     text-align: center; color: var(--text-mid); font-size: 12.5px; line-height: 1.6;
     margin-top: 28px;
@@ -67,79 +85,107 @@
     box-shadow: 0 6px 18px rgba(221,106,66,.35);
   }
   .cta:active { background: var(--primary-dark); }
+  .specs { margin-top: 26px; }
+  .spec { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+  .spec:last-child { border-bottom: none; }
+  .spec dt { color: var(--text-mid); }
+  .spec dd { font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <img class="logo" src="icon.png" alt="Neibo">
-  <h1>Alpha 2.5.0 <span class="badge">changelog</span></h1>
-  <p class="sub">The biggest design update yet: profiles, a rebuilt report flow<br>and a whole new feel across the app.</p>
-  <p class="date">July 2026 · Neibo alpha test</p>
+  <h1>Alpha 3.0.0 <span class="badge">changelog</span></h1>
+  <p class="sub">Every screen redrawn in glass, a whole new tab with 1492 places<br>in Riga, and events that read like Reels.</p>
+  <p class="date">7 September 2026 · Neibo alpha test</p>
 
-  <h2><span class="emoji">👤</span> Profiles are here</h2>
-  <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>Your own profile.</b> Avatar, nickname, member-since date, your report history and live stats — reports, reactions received and views. Open it from Settings, or tap any author on a map card or post to see theirs.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Activity rank.</b> Reports and reactions you receive earn points that level you up: Newcomer → Neighbour → Local → Voice of the District → Neighbourhood Legend. Progress bar included.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Profile photos.</b> Upload an avatar straight from your gallery — it shows up in your profile.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Pick your name.</b> Right after signing in (guests too), Neibo now asks what to call you — with live checks and suggestions. Nickname editing moved into your profile.</p></div>
+  <div class="notice">
+    <h3><span>⚠️</span> Update Expo Go first</h3>
+    <p>Alpha 3.0.0 runs on a brand-new Expo runtime (<b>SDK 57</b>). Expo Go only opens projects built for the version it ships with, so an older Expo Go will not see this update at all — you would keep opening 2.6.0 and think nothing happened.</p>
+    <p>If you see <b>"Project is incompatible with this version of Expo Go"</b>, that is the same thing from the other side: update Expo Go and open Neibo again.</p>
+    <div class="stores">
+      <a class="store" href="https://apps.apple.com/app/expo-go/id982107779">Update · App Store</a>
+      <a class="store" href="https://play.google.com/store/apps/details?id=host.exp.exponent">Update · Google Play</a>
+    </div>
   </div>
 
-  <h2><span class="emoji">➕</span> Reporting — rebuilt again, properly</h2>
+  <h2><span class="emoji">🧊</span> A completely new look</h2>
   <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>Glass island.</b> The report sheet is now a compact frosted-glass panel that floats up from the plus button and sizes itself to each step — no more full-screen takeover. Tap outside it to close.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>8 categories.</b> Besides accidents, fires, utilities and city life there are two fresh ones: <b>Vibe</b> (sunsets, cool cars, street art) and <b>Spots</b> (finds, cute animals, new places). Because the alpha showed you post good moments, not just emergencies.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Morphing categories.</b> Pick a category and it glides to the centre while subcategories appear around it as neat tiles. Tap it again to bring the full grid back.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Cleaner location step.</b> Just the map: your position, a centered pin and a visible 500 m circle showing exactly how far you can place the marker. Too far? The button simply greys out.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Swipe to go back.</b> iOS-style edge swipe steps you back through the wizard; a segmented progress bar and a back button live in the header.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Photo &amp; details, minimal.</b> A big photo square and a borderless notes field — nothing extra.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Glass, not panels.</b> Map controls, the tab bar and the sheets are now translucent glass that picks up the map underneath, instead of solid cream-coloured panels. On iOS 26 it is the real system material, so it bends and blurs whatever is behind it.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>One accent instead of many.</b> Text and controls dropped to a single near-black ink, so colour on screen now means something — a category, an alert, a live event — rather than decoration.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>A dock that follows the screen.</b> The bottom bar now carries a contextual button on the left that changes with the screen you are on: how many events are nearby on the map, list-or-map in Where to go. Selected tabs fill in, the rest stay outlines.</p>
+      <p class="more">If you tested in August, this is the part that never reached you. The redesign was finished four weeks ago, but a delivery setting kept it from being published. That is fixed — it is in this release.</p></div>
   </div>
 
-  <h2><span class="emoji">❤️</span> Reactions, reimagined</h2>
+  <h2><span class="emoji">🍸</span> Where to go — a new tab</h2>
   <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>Heart first.</b> Every event card has a quick heart — tap to like. An arrow next to it unfolds the full row: like, dislike, laugh, cry and a clown we drew ourselves.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Icons, not emojis.</b> Reactions are now clean minimal icons that match the app, with per-reaction counters. Your pick stays highlighted in its own colour.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>1492 places in Riga.</b> The Events tab became <b>Where to go</b>: restaurants, cafés, bars, pubs, museums, clubs, theatres and stages, imported from OpenStreetMap.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Open right now.</b> Every place carries its opening hours, so the list can tell you what is open at this moment and when the rest closes — and you can filter down to just the open ones.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Filters that count first.</b> The filters page shows how many places match each option <i>before</i> you apply it, so you never tap into an empty list.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>List or map, one button.</b> Switch with the button at the bottom left. On the map, places group into clusters and open as cards; in the list they are sorted by distance from you.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>A page per place.</b> Tap any place for its full page: hours for the week, address, distance, what it offers, and a route button.</p></div>
   </div>
 
-  <h2><span class="emoji">🗺️</span> Map, alive</h2>
+  <h2><span class="emoji">📱</span> Events read like Reels</h2>
   <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>Live pulse.</b> Ongoing events breathe with a red halo right on the map — you can spot what's happening now at a glance.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Cleaner markers.</b> No more pointy tails — just crisp circles that pop in smoothly. Clusters form less eagerly and grow in gently.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Smoother cards.</b> Tapping a marker opens the event card with a quick soft bounce. Swipe down to dismiss. Confirm buttons and crosses are gone — the app asks eyewitnesses itself, Waze-style.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Radius, back where it belongs.</b> The radius control returned to the "Nearby" sheet — tap the radar icon to adjust with a slider and presets.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Full-screen cards.</b> Tapping a pin opens the photo full-screen with the street, the distance and the report itself over it. Pull down to dismiss.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Swipe through the neighbourhood.</b> Swipe left or right to move between everything nearby without going back to the map.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Comments inside the card.</b> No separate screen any more. A row of quick reactions sits above the input, and they are ordinary system emoji now — the same ones your keyboard types.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Double-tap to like.</b> On the photo, or on the heart. The heart fills in red the way you would expect.</p></div>
   </div>
 
-  <h2><span class="emoji">🧭</span> New look &amp; feel</h2>
+  <h2><span class="emoji">📍</span> Nearby, on the map</h2>
   <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>Floating dock.</b> Navigation is now a frosted-glass pill hovering above the content, icon-only, with a soft sliding highlight and icons that fill in when active.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Warmer design language.</b> New palette, softer shadows, gentle spring physics and subtler haptics across the whole app — vibration only where it means something.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Welcome screen redesign.</b> Cleaner start: one-tap guest entry or email sign-in on a tidy bottom panel.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Settings, decluttered.</b> A profile card on top, notifications moved to their own page, and your nickname now lives in the profile.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Your zone, at a glance.</b> The button at the bottom left of the map shows how many events are inside your zone and opens the list of them.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Radius is yours.</b> 500 m, 1, 2 or 5 km — and the circle drawn on the map shows exactly what counts as nearby, including for alerts.</p></div>
   </div>
 
-  <h2><span class="emoji">🛡️</span> Keeping the map trustworthy</h2>
+  <h2><span class="emoji">🎚️</span> Feed filters, rebuilt</h2>
   <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>AI moderation.</b> Reports with offensive text or inappropriate photos are checked automatically before they reach the map.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>View counters.</b> Events count unique views — see how many neighbours noticed a report.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Stronger moderation tools.</b> The team can now ban accounts that abuse the map — banned users can't post or react.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Same filters as Where to go.</b> One Filters button with a badge showing how many are active, and a page where every event type shows its own count.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span><b>The Neighbours / News switch stops drifting.</b> The sliding thumb used to sit off-centre on the longer label. It now measures each side properly.</p></div>
+  </div>
+
+  <h2><span class="emoji">⚙️</span> Under the hood</h2>
+  <div class="card">
+    <div class="item"><p><b>Three SDK versions in one jump.</b> Neibo moved from Expo SDK 54 to 57, React Native from 0.81 to 0.86, and the map was rewritten onto React Native's new rendering architecture. It was done in three separate steps so any breakage could be traced to one of them.</p>
+      <p class="more">None of this should be visible to you, which is the point — and it is why Expo Go has to be updated: the runtime this build asks for is <b>exposdk:57.0.0</b>, and only the newest Expo Go provides it.</p></div>
   </div>
 
   <h2><span class="emoji">🔧</span> Fixed along the way</h2>
   <div class="card">
-    <div class="item"><p><span class="tag fix">FIX</span>Markers sometimes ignored the first tap on iOS — not anymore.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>The report sheet could open stuck to the top of the screen after using the keyboard.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>The radius button occasionally went dead until app restart.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>Fullscreen photos no longer wobble — and they grow out of the exact frame you tapped.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>Dozens of small animation, layering and layout fixes across map, feed and report.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>Swiping through event cards no longer freezes — every swipe used to kick off a storm of live-update traffic.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>The Where to go map no longer crashes when you zoom out and back in.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>Icons no longer show up as question marks.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>The Nearby button keeps its glass — leaving the map and coming back left it fully transparent.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>Pulling an event card down closes it from anywhere on the card, and scrolling inside it no longer fights the swipe.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>Map clusters no longer jump when your location updates.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>OpenStreetMap attribution added to the Where to go map, as its licence requires.</p></div>
   </div>
 
   <h2><span class="emoji">⚠️</span> Known issues</h2>
   <div class="card">
-    <div class="item"><p>Push notifications are still off in the alpha build — the notifications page is a preview. Coming with a future release.</p></div>
-    <div class="item"><p>Auto-parsed news don't have exact map locations yet — we're working on it.</p></div>
+    <div class="item"><p><b>Push notifications still do not arrive in Expo Go.</b> Alerts work inside the app, but system notifications need a standalone build — a separate release, not a setting we can flip.</p></div>
+    <div class="item"><p><b>Where to go covers Riga only.</b> The catalogue is imported city by city; the rest of Latvia is next.</p></div>
+    <div class="item"><p><b>The Latvian interface is incomplete.</b> The strings exist; the translation is being filled in.</p></div>
+    <div class="item"><p><b>The Live filter is off in the News layer.</b> Parsed news has no "happening now" information, so the filter would always come back empty. It stays available for neighbour reports.</p></div>
+  </div>
+
+  <h2><span class="emoji">📦</span> Release details</h2>
+  <div class="card">
+    <dl class="specs" style="margin-top:0">
+      <div class="spec"><dt>Version</dt><dd>2.6.0 → 3.0.0</dd></div>
+      <div class="spec"><dt>Expo SDK</dt><dd>54.0.0 → 57.0.0</dd></div>
+      <div class="spec"><dt>React Native</dt><dd>0.81.5 → 0.86.3</dd></div>
+      <div class="spec"><dt>Update runtime</dt><dd>exposdk:57.0.0</dd></div>
+      <div class="spec"><dt>Minimum client</dt><dd>Expo Go for SDK 57</dd></div>
+      <div class="spec"><dt>Places in catalogue</dt><dd>1492</dd></div>
+      <div class="spec"><dt>Previous release</dt><dd>2.6.0 · 10 Aug 2026</dd></div>
+    </dl>
   </div>
 
   <a class="cta" href="https://t.me/neibo_app">Discuss in the Telegram channel</a>
-  <p class="foot">The update arrives automatically next time you open the app.<br>If it doesn't — fully close Expo Go and open it again.<br><br>Not in the alpha yet? <a href="https://et3r9ity.github.io/neibo/">Join here</a></p>
+  <p class="foot">Once Expo Go is up to date, everything after this arrives automatically —<br>just reopen the app. If it still looks old, fully close Expo Go and open it again.<br><br>Not in the alpha yet? <a href="https://et3r9ity.github.io/neibo/">Join here</a></p>
 </div>
 </body>
 </html>

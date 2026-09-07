@@ -64,6 +64,11 @@
   <h1>Join the Neibo alpha</h1>
   <p class="sub">Live map of Latvia: accidents, fires, outages and city events — everything happening nearby, in one app.</p>
 
+  <!-- ВАЖНО: в ссылке CTA ниже жёстко прописан runtime-version. Его надо
+       менять при КАЖДОМ подъёме мажорной версии Expo SDK, иначе Expo Go
+       запросит обновление под старый рантайм и покажет «Project is
+       incompatible with this version of Expo Go». Сейчас: exposdk:57.0.0
+       (Alpha 3.0.0, 07.09.2026). -->
   <div class="step"><div class="num">1</div>
     <div>
       <p><b>Install Expo Go</b> — the alpha runs inside it.</p>
@@ -90,10 +95,12 @@
     <p><b>Log in to Expo Go</b> with your account, then tap the button below</p>
   </div>
 
-  <a class="cta" href="exp://u.expo.dev/bff3cc4e-3219-47c0-972f-e19bb8d88619?channel-name=preview&amp;runtime-version=exposdk:54.0.0">Open Neibo in Expo Go</a>
+  <a class="cta" href="exp://u.expo.dev/bff3cc4e-3219-47c0-972f-e19bb8d88619?channel-name=preview&amp;runtime-version=exposdk:57.0.0">Open Neibo in Expo Go</a>
   <p class="hint">The button works after steps 1–5. Updates arrive automatically — just reopen the app.</p>
 
   <hr class="divider">
+  <p class="hint"><b>Already in the alpha?</b> Alpha 3.0.0 runs on a new Expo runtime — <b>update Expo Go</b> from the App Store or Google Play first, otherwise you will keep opening the old version. <a href="https://et3r9ity.github.io/neibo/changelog.html">See what's new</a></p>
+  <p class="hint">Seeing "Project is incompatible with this version of Expo Go"? Your Expo Go is older than the app needs — update it in the store, then tap the button again.</p>
   <p class="hint">Seeing "Something went wrong"? You haven't accepted the invite yet, or Expo Go is logged into a different account. News &amp; patch notes: <a href="https://t.me/neibo_app">t.me/neibo_app</a></p>
 </div>
 </body>
