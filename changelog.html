@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neibo — Alpha 4.0.0 changelog</title>
-<meta name="description" content="Everything new in Neibo Alpha 4.0.0 — full changelog.">
-<meta property="og:title" content="Neibo Alpha 4.0.0 — full changelog">
+<title>Neibo — Alpha 4.1.0 changelog</title>
+<meta name="description" content="Everything new in Neibo Alpha 4.1.0 — full changelog.">
+<meta property="og:title" content="Neibo Alpha 4.1.0 — full changelog">
 <meta property="og:description" content="Report in one press with AI, a map that reads like Bolt, new categories, Places, replies in comments and saved guest accounts.">
 <meta property="og:image" content="https://et3r9ity.github.io/neibo/icon.png">
 <link rel="icon" href="icon.png">
@@ -88,110 +88,69 @@
 <body>
 <div class="wrap">
   <img class="logo" src="icon.png" alt="Neibo">
-  <h1>Alpha 4.0.0 <span class="badge">changelog</span></h1>
-  <p class="sub">Report in one press with AI, a map that reads like Bolt, and a lot of small things that finally behave.</p>
-  <p class="date">17 October 2026 · Neibo alpha test</p>
+  <h1>Alpha 4.1.0 <span class="badge">changelog</span></h1>
+  <p class="sub">Neibo in Latvian, a clear choice about AI before your first photo, reports on comments — and a move to the new Expo Go.</p>
+  <p class="date">1 November 2026 · Neibo alpha test</p>
 
   <div class="notice">
-    <h3><span>✅</span> No Expo Go update needed</h3>
-    <p>This release runs on the same runtime as 3.0 (<b>Expo SDK 57</b>). If 3.0.1 opened for you, 4.0.0 will too — just reopen the app. Still seeing "Project is incompatible"? Then your Expo Go is older than SDK 57: update it from the App Store or Google Play.</p>
+    <h3><span>⬆️</span> Update Expo Go first</h3>
+    <p>This release runs on <b>Expo SDK 58</b>. Update Expo Go from the App Store or Google Play, then open Neibo again. If you see «Project is incompatible with this version of Expo Go», your Expo Go is still the old one. On iPhone, the new Expo Go could not open 4.0.1 at all — 4.1.0 fixes that.</p>
   </div>
 
-  <h2><span class="emoji">📸</span> Report in one press</h2>
+  <h2><span class="emoji">🇱🇻</span> Neibo in Latvian</h2>
   <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>Hold «+» to snap.</b> Press and hold the «+» button: the camera window flies out of it, and the photo is taken the moment you let go. Slide left to cancel. A plain tap still opens the camera the usual way.</p>
-      <p class="more">While holding, slide down for the ultra-wide lens and up to zoom in. On Pro iPhones zooming switches to the telephoto lens on its own.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>AI fills in the report.</b> The photo goes to the AI, which picks the category and type and writes a short description — as a message to your neighbours, not a caption under a picture. The place is set from where you stood.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>It asks when it's not sure.</b> If the photo could mean two different things, you get one quick question instead of a wrong guess.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Publishes itself when it's sure.</b> A confident report shows a card with a 5-second «Publish» countdown — tap to send now, or cancel. Don't want that? Turn off <b>Auto-publish</b> in Settings.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Nothing gets lost.</b> If the app closes in the middle of a report, it offers to finish it the next time you open Neibo. Closed a report by accident? A toast lets you bring it back.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>The whole interface in Latvian.</b> Screens, buttons, categories and types — everything is translated. Choose Latviešu or Русский in <b>Settings → Language</b>; the app remembers your choice.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Right language from the start.</b> On first launch Neibo follows your phone's language, and uses Latvian when your phone is set to anything else.</p></div>
   </div>
 
-  <h2><span class="emoji">🗂️</span> New categories</h2>
+  <h2><span class="emoji">🤖</span> You decide about AI</h2>
   <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>About 280 types in three levels.</b> Category → type → optional detail, so a crash can say how bad it is and a fire can say where it is burning — a flat, a balcony, a stairwell. Search inside the picker by any word.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Two new categories.</b> <b>Need help</b> — for when someone nearby needs a hand — and <b>Roads &amp; transport</b>, including ticket inspectors and police posts.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Titles that read like a sentence.</b> Events are called «Serious crash», «Bike stolen» or «An elderly person needs help», not by the name of a menu item.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>A clear question before the first photo.</b> Before your first snap, Neibo explains what goes to Google Gemini to fill in the report and what OpenAI checks before anything is published. Allow it, or choose <b>Without recognition</b> and fill in the fields yourself.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Change your mind any time.</b> The <b>Photo recognition</b> switch is the first one under <b>Publishing</b> in Settings.</p></div>
   </div>
 
-  <h2><span class="emoji">🗺️</span> A map that reads like Bolt</h2>
+  <h2><span class="emoji">🚩</span> Safer comments</h2>
   <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>No more clusters.</b> Every event keeps its own place: a dot when you see the whole city, a bigger dot closer in, an icon at street level and a flag with its title right up close. Markers change smoothly as you zoom, without jumping or blinking.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>The selected pin shows what happened.</b> It carries the category icon, appears the instant you tap, and moves along as you swipe through the cards.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>A crisp radius circle.</b> The «Nearby» circle is now a sharp dashed line at any zoom, and it hides itself when you zoom far out.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>«Where am I» in two steps.</b> The first tap brings you back to the centre, the second zooms to street level. When you are already there, the button gets out of the way.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>A bell that knows what's new.</b> A dot on the bell tells you something new happened inside your radius.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Report or block from a comment.</b> Press and hold someone else's comment: report it with a reason, or block the person.</p></div>
   </div>
 
-  <h2><span class="emoji">📍</span> Places (was «Where to go»)</h2>
+  <h2><span class="emoji">📄</span> Rules and help</h2>
   <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>New name, new markers.</b> The tab is now called <b>Places</b>. On iPhone the map uses the same dot → icon → flag markers as the event map; Android keeps the old clusters for now.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Search by cuisine.</b> Type «sushi», «pizza» or «shawarma» and get places that serve it.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Choose a type from cards.</b> A grid of place types, and the app remembers the last one you picked.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Nothing hides off-screen.</b> «N places outside the map · Show» brings them into view in one tap. «Route» lets you choose the navigator.</p></div>
-  </div>
-
-  <h2><span class="emoji">💬</span> Comments and people</h2>
-  <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>Replies, likes and dislikes.</b> Comments work like in TikTok: reply to someone, like or dislike, sort by newest or most relevant.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Block a person.</b> From their profile («⋯» at the top). Their events and comments disappear for you.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>«Near me» in the feed.</b> The feed can show just your radius, with the distance on every row. News tells you how many days ago it was last updated.</p></div>
-  </div>
-
-  <h2><span class="emoji">👤</span> Account and settings</h2>
-  <div class="card">
-    <div class="item"><p><span class="tag new">NEW</span><b>A clearer first screen.</b> «Create account» or «I have an account» — no more guessing whether you are signing in or signing up.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Save your guest account.</b> As a guest, your nickname, points and reports live on this phone only. «Save account» ties them to your email, so they survive a new phone.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>About Neibo, Language and Delete account</b> in Settings. Russian is selected; Latviešu is coming.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Fewer pop-ups on first launch.</b> The system notification prompt no longer jumps at you right away, and location is asked after you pick a nickname.</p></div>
-  </div>
-
-  <h2><span class="emoji">✋</span> Easier to use</h2>
-  <div class="card">
-    <div class="item"><p><span class="tag fix">FIX</span><b>The Neibo font, everywhere.</b> Most text was quietly falling back to the system font. Now the whole app uses Manrope, as designed.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span><b>Large text works.</b> With bigger text in iOS settings, cards, lists, filters and the profile wrap properly instead of cutting words or overlapping.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Reduce Motion is respected.</b> With it on, the camera window and «+» stop flying and stretching and simply fade.</p></div>
-    <div class="item"><p><span class="tag new">NEW</span><b>Small hints, once.</b> A pill above «+» tells you that you can hold it, and the first event card nods once to show it can be swiped.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Privacy Policy and Terms of Use</b> are now in the app instead of a placeholder. They are still drafts and say so at the top.</p></div>
+    <div class="item"><p><span class="tag new">NEW</span><b>Write to support</b> — the first line in <b>About Neibo</b>. The app version is added to the message for you.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span><b>No more «coming soon».</b> The unfinished «Categories» and «My territories» previews are hidden from Alerts until notifications can reach your phone.</p></div>
   </div>
 
   <h2><span class="emoji">🔧</span> Fixed along the way</h2>
   <div class="card">
-    <div class="item"><p><span class="tag fix">FIX</span>A report can't be published twice — a second tap on a slow network now opens the event you already posted.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>A comment that failed to send no longer pretends it was sent.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>A photo that didn't load shows the category tile instead of an empty box.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>The card after a quick snap no longer shows an empty thumbnail.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>«Back» from event details or a profile returns to the same card, and «Show on map» returns to the tab you came from.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>The Nearby sheet no longer says «0 events» while it is still loading.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>The map no longer moves on its own while you are on another tab.</p></div>
-    <div class="item"><p><span class="tag fix">FIX</span>Dragging the report pin with a finger moves the place again on iOS.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span>On a slow start the app could replace your saved account with a new guest. It now waits for your session first.</p></div>
+    <div class="item"><p><span class="tag fix">FIX</span><b>«Delete account» works.</b> It removes your account and data on the server; what is kept, and for how long, is in the Privacy Policy.</p></div>
   </div>
 
   <h2><span class="emoji">🛡️</span> Under the hood</h2>
   <div class="card">
-    <div class="item"><p><b>The server decides, not the app.</b> Event status, the «verified» badge and how long an event stays on the map are now set by the server. A modified app can't make its own reports look verified or keep them up forever.</p></div>
-    <div class="item"><p><b>Photos are handled more carefully.</b> A photo that is still used by an event or a moderation decision can't be deleted, and an event can't be published with a photo that has gone missing.</p></div>
+    <div class="item"><p><b>Photos open through short-lived links</b> instead of permanent public addresses.</p></div>
+    <div class="item"><p><b>A post can only use your own photo,</b> and a profile picture can only come from Neibo's own storage.</p></div>
   </div>
 
   <h2><span class="emoji">⚠️</span> Known issues</h2>
   <div class="card">
-    <div class="item"><p><b>«Delete account» isn't live yet.</b> The button is there and explains what will be removed; the server part arrives in one of the next updates.</p></div>
+    <div class="item"><p><b>Reporting a comment may show an error for a few days.</b> The app part is ready; the server part is being switched on.</p></div>
+    <div class="item"><p><b>AI descriptions are still written in Russian,</b> even with the Latvian interface. Latvian descriptions come next.</p></div>
     <div class="item"><p><b>Sign in with Apple or Google is not switched on yet.</b> Email and guest accounts work.</p></div>
-    <div class="item"><p><b>Places on Android still use clusters.</b> The new markers are iPhone-only for now.</p></div>
-    <div class="item"><p><b>The one-press camera was tested on iPhone.</b> Android testers, tell us how holding «+» behaves on your phone.</p></div>
     <div class="item"><p><b>Push notifications still don't arrive in Expo Go.</b> Alerts work inside the app; system notifications need a standalone build.</p></div>
-    <div class="item"><p><b>The Latvian interface is not ready yet.</b></p></div>
   </div>
 
   <h2><span class="emoji">📦</span> Release details</h2>
   <div class="card">
     <dl class="specs" style="margin-top:0">
-      <div class="spec"><dt>Version</dt><dd>3.0.1 → 4.0.0</dd></div>
-      <div class="spec"><dt>Expo SDK</dt><dd>57.0.0 (unchanged)</dd></div>
-      <div class="spec"><dt>Update runtime</dt><dd>exposdk:57.0.0</dd></div>
-      <div class="spec"><dt>Minimum client</dt><dd>Expo Go for SDK 57</dd></div>
-      <div class="spec"><dt>Report types</dt><dd>≈ 280</dd></div>
-      <div class="spec"><dt>Changes since 3.0.1</dt><dd>511 commits</dd></div>
-      <div class="spec"><dt>Previous release</dt><dd>3.0.1 · 8 Sep 2026</dd></div>
+      <div class="spec"><dt>Version</dt><dd>4.0.1 → 4.1.0</dd></div>
+      <div class="spec"><dt>Expo SDK</dt><dd>57 → 58</dd></div>
+      <div class="spec"><dt>Update runtime</dt><dd>exposdk:58.0.0</dd></div>
+      <div class="spec"><dt>Minimum client</dt><dd>Expo Go for SDK 58</dd></div>
+      <div class="spec"><dt>Languages</dt><dd>Latviešu, Русский</dd></div>
+      <div class="spec"><dt>Changes since 4.0.1</dt><dd>127 commits</dd></div>
+      <div class="spec"><dt>Previous release</dt><dd>4.0.1 · 17 Oct 2026</dd></div>
     </dl>
   </div>
 
