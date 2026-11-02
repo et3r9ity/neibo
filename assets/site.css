@@ -1,0 +1,325 @@
+/* neibo.lv — главная. Стиль — telegram/BANNER-STYLE.md (Onest, чернила #1C1C1E, рассветный плейт). */
+
+@font-face { font-family: 'Onest'; font-style: normal; font-display: swap; font-weight: 500;
+  src: url(fonts/onest-latin-500-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Onest'; font-style: normal; font-display: swap; font-weight: 500;
+  src: url(fonts/onest-latin-ext-500-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'Onest'; font-style: normal; font-display: swap; font-weight: 600;
+  src: url(fonts/onest-latin-600-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Onest'; font-style: normal; font-display: swap; font-weight: 600;
+  src: url(fonts/onest-latin-ext-600-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: 'Onest'; font-style: normal; font-display: swap; font-weight: 900;
+  src: url(fonts/onest-latin-900-normal.woff2) format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Onest'; font-style: normal; font-display: swap; font-weight: 900;
+  src: url(fonts/onest-latin-ext-900-normal.woff2) format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+
+:root {
+  --ink: #1C1C1E;
+  --grey: #8E8E93;
+  --grey-dark: #6C6C70;
+  --glass: rgba(255, 255, 255, .62);
+  --glass-edge: rgba(255, 255, 255, .78);
+  --tile: rgba(255, 255, 255, .5);
+  --tile-edge: rgba(255, 255, 255, .85);
+  --gutter: clamp(16px, 6vw, 96px);
+  --ease: cubic-bezier(.2, .8, .2, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: 'Onest', -apple-system, system-ui, sans-serif;
+  font-weight: 500;
+  color: var(--ink);
+  background: #FBE7D6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Рассветный плейт: fixed-слой, а не background-attachment (iOS его не держит). */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: #FBE7D6 url(dawn.jpg) 30% center / cover no-repeat;
+}
+@media (max-width: 700px) {
+  body::before { background-image: url(dawn-1200.jpg); background-position: 18% center; }
+}
+
+a { color: inherit; }
+
+.page {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 28px var(--gutter) 28px;
+}
+
+/* ---------- шапка ---------- */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wordmark {
+  font-weight: 900;
+  font-size: 26px;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+.lang {
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.lang a, .lang span {
+  padding: 7px 11px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+.lang span { background: var(--ink); color: #fff; }
+.lang a { color: var(--grey-dark); transition: background-color 160ms var(--ease), color 160ms var(--ease); }
+.lang a:hover { background: var(--tile); color: var(--ink); }
+
+/* ---------- первый экран ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  align-items: center;
+  align-content: center;
+  gap: 48px;
+  padding: 56px 0 64px;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: clamp(54px, 8.2vw, 116px);
+  line-height: .92;
+  letter-spacing: -0.035em;
+  margin-bottom: 32px;
+  text-wrap: balance;
+}
+h1 .ln { display: block; position: relative; width: max-content; max-width: 100%; }
+
+/* Фирменный приём: правые концы строк 2–3 уходят в мягкий блюр. */
+h1 .fade .s {
+  -webkit-mask-image: linear-gradient(90deg, #000 0, #000 50%, transparent 100%);
+          mask-image: linear-gradient(90deg, #000 0, #000 50%, transparent 100%);
+}
+h1 .fade .b {
+  /* Запас .5em вокруг текста: иначе маска обрезает размытие прямоугольником. */
+  position: absolute;
+  left: -.5em;
+  top: -.5em;
+  padding: .5em;
+  filter: blur(.11em);
+  opacity: .65;
+  -webkit-mask-image: linear-gradient(90deg, transparent 42%, #000 76%);
+          mask-image: linear-gradient(90deg, transparent 42%, #000 76%);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Кнопка «+» с ореолом ИИ, встроена в первую строку. */
+.plus {
+  position: relative;
+  display: inline-block;
+  width: .72em;
+  height: .72em;
+  margin-left: .14em;
+  vertical-align: .02em;
+}
+.plus .halo {
+  position: absolute;
+  inset: -6%;
+  border-radius: 50%;
+  background: conic-gradient(from 210deg, #FF9F0A, #FF2D55, #AF52DE, #5AC8FA, #FF9F0A);
+  filter: blur(.16em);
+  opacity: .7;
+}
+.plus .rim {
+  position: absolute;
+  inset: -2.5%;
+  border-radius: 50%;
+  background: conic-gradient(from 210deg, #FFCC7D, #FFA0B2, #BD9CCE, #C7EDFF, #FFD390, #FFCC7D);
+}
+.plus .core {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--ink);
+  box-shadow: inset 0 0 .05em rgba(255, 255, 255, .5);
+  display: grid;
+  place-items: center;
+}
+.plus svg { width: 46%; height: 46%; }
+
+.lead {
+  font-size: clamp(18px, 1.55vw, 22px);
+  line-height: 1.42;
+  letter-spacing: -0.01em;
+  color: var(--grey-dark);
+  max-width: 31em;
+  text-wrap: pretty;
+}
+.lead strong { color: var(--ink); font-weight: 600; }
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 54px;
+  padding: 0 26px;
+  border-radius: 27px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  transition: transform 160ms var(--ease), box-shadow 160ms var(--ease), background-color 160ms var(--ease);
+}
+.btn:active { transform: scale(.97); }
+.btn-primary {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(28, 28, 30, .22);
+}
+.btn-primary:hover { box-shadow: 0 10px 30px rgba(28, 28, 30, .3); transform: translateY(-1px); }
+.btn-glass {
+  background: var(--glass);
+  border: 1px solid var(--glass-edge);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+          backdrop-filter: blur(20px) saturate(1.3);
+  color: var(--ink);
+}
+.btn-glass:hover { background: rgba(255, 255, 255, .78); transform: translateY(-1px); }
+.btn svg { width: 18px; height: 18px; flex: none; }
+
+.note {
+  margin-top: 18px;
+  font-size: 14px;
+  color: var(--grey-dark);
+}
+
+/* ---------- карточка-пример из приложения ---------- */
+.card {
+  justify-self: end;
+  width: min(100%, 384px);
+  padding: 20px;
+  border-radius: 32px;
+  background: var(--glass);
+  border: 1px solid var(--glass-edge);
+  -webkit-backdrop-filter: blur(28px) saturate(1.25);
+          backdrop-filter: blur(28px) saturate(1.25);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, .12);
+}
+.card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 2px 4px 14px;
+}
+.card-title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+.live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--grey-dark);
+}
+.live::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #FF2D55;
+  box-shadow: 0 0 0 3px rgba(255, 45, 85, .18);
+}
+.items { list-style: none; display: grid; gap: 8px; }
+.item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 22px;
+  background: var(--tile);
+  border: 1px solid var(--tile-edge);
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+.icon svg { width: 20px; height: 20px; }
+.i-red { background: linear-gradient(160deg, #FF5A75, #FF2D55); }
+.i-amber { background: linear-gradient(160deg, #FFB340, #FF9F0A); }
+.i-violet { background: linear-gradient(160deg, #C57BEA, #AF52DE); }
+.item-title { font-size: 16px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25; }
+.item-meta { display: block; font-size: 13.5px; color: var(--grey-dark); margin-top: 2px; }
+.card-foot {
+  padding: 12px 4px 0;
+  font-size: 12.5px;
+  color: var(--grey);
+}
+
+/* ---------- подвал с реквизитами ---------- */
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(28, 28, 30, .08);
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--grey-dark);
+}
+.foot p { max-width: 62em; }
+.foot b { font-weight: 600; color: var(--ink); }
+.foot a { text-decoration: none; color: var(--ink); font-weight: 600; }
+.foot a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- адаптив ---------- */
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 48px; }
+  .card { justify-self: start; }
+}
+@media (max-width: 520px) {
+  .page { padding-top: 20px; }
+  h1 { font-size: 11vw; }
+  .actions { flex-direction: column; align-items: stretch; }
+  .btn { justify-content: center; }
+  h1 { margin-bottom: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+}
