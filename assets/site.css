@@ -118,7 +118,9 @@ h1 .fade .s {
   -webkit-mask-image: linear-gradient(90deg, #000 0, #000 50%, transparent 100%);
           mask-image: linear-gradient(90deg, #000 0, #000 50%, transparent 100%);
 }
-h1 .fade .b {
+h1 .fade::after {
+  content: attr(data-t);
+  content: attr(data-t) / "";
   /* Запас .5em вокруг текста: иначе маска обрезает размытие прямоугольником. */
   position: absolute;
   left: -.5em;
